@@ -132,39 +132,34 @@ table {
     width: 100%;
 }
 
-td {
+td, th {
     padding: 0 0.6em;
 }
 
-.rb-table tr:not(.table-abscissa) td {
+th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.rb-table td {
     border: 1px;
-    border-style: solid none;
+    border-style: solid none solid solid;
     border-color: var(--table-border);
 }
 
-.rb-table tr:not(.table-abscissa) td:not(:first-child) {
-    border-style: solid none solid solid;
-}
-
-.rb-table .table-abscissa, .rb-table .table-ordinate {
-    font-weight: bold;
-    text-align: center;
+.rb-table td:first-of-type {
+    border-style: solid none;
 }
 
 .rb-table tr:nth-child(2n) td {
     background-color: var(--table-bg);
 }
 
-.cs-table, .cs-table td, .cs-table tr {
+.cs-table, .cs-table tr, .cstable th, .cs-table td {
     border: 1px solid var(--black);
 }
 
-.cs-table tr.table-abscissa {
+.cs-table th {
     background-color: var(--black);
     color: white;
-    text-align: center;
-}
-
-.cs-table td.table-ordinate {
-    font-weight: bold;
 }
