@@ -142,7 +142,7 @@ th {
 }
 
 .rb-table td {
-    border: 1px;
+    border-width: 1px;
     border-style: solid none solid solid;
     border-color: var(--table-border);
 }
@@ -156,7 +156,9 @@ th {
 }
 
 .cs-table, .cs-table tr, .cstable th, .cs-table td {
-    border: 1px solid var(--black);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--black);
 }
 
 .cs-table th {

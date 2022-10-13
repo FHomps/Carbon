@@ -1,0 +1,35 @@
+@import "carbone.css";
+
+body {
+    line-height: 1.2em;
+    font-size: 0.8em;
+}
+
+.sheet {
+    padding: 15mm;
+}
+
+h1 {
+    font-family: title-font;
+    margin-top: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+th {
+    height: 1em;
+}
+
+.talents td {
+    border-style: none;
+}
+
+.talents td:nth-child(2n+1) {
+    border-style: none dotted none none;
+    border-color: rgb(138, 138, 138);
+}
+
+.talents td:nth-child(2n) {
+    border-style: none solid none none;
+    width: 2em;
+}
