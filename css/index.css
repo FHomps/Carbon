@@ -26,7 +26,6 @@ body {
     background-color: var(--bg_color_dark);
     color: var(--text_color);
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
     font-size: larger;
     line-height: 1.8em;
     margin:0;
