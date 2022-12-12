@@ -67,4 +67,6 @@ th {
 
 .pt-table th {
     text-align: left;
+    max-width: 1cm;
+    min-width: 1cm;
 }
