@@ -1,20 +1,4 @@
-/* Intentional hardlinking, see html for explanation */
-@import url(https://carbon.francois.homps.fr/css/carbone.css);
-
-@font-face {
-    font-family: title-font;
-    src: url("https://carbon.francois.homps.fr/assets/fonts/Silicon.ttf") format('truetype');
-}
-
-@font-face {
-    font-family: header-font;
-    src: url("https://carbon.francois.homps.fr/assets/fonts/Copperplate\ Gothic\ Bold\ Regular.ttf");
-}
-
-@font-face {
-    font-family: paragraph-font;
-    src: url("https://carbon.francois.homps.fr/assets/fonts/Poly-Regular.ttf");
-}
+@import "carbone.css";
 
 body {
     font-size: small;
