@@ -1,16 +1,16 @@
 @font-face {
     font-family: title-font;
-    src: url("../fonts/Silicon.ttf") format('truetype');
+    src: url("../assets/fonts/Silicon.ttf") format('truetype');
 }
 
 @font-face {
     font-family: header-font;
-    src: url("../fonts/Copperplate\ Gothic\ Bold\ Regular.ttf");
+    src: url("../assets/fonts/Copperplate\ Gothic\ Bold\ Regular.ttf");
 }
 
 @font-face {
     font-family: paragraph-font;
-    src: url("../fonts/Poly-Regular.ttf");
+    src: url("../assets/fonts/Poly-Regular.ttf");
 }
 
 :root {
