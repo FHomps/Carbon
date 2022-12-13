@@ -1,9 +1,3 @@
-/*
-    Intentional hardlink to fetch carbon.cs from browser-saved character sheets 
-    Only really useful on Firefox (Chrome does not save textarea inputs within the html file)
-*/
-@import url("https://carbon.francois.homps.fr/css/carbone.css");
-
 body {
     font-size: small;
 }
