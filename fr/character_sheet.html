@@ -20,7 +20,7 @@
 </head>
 
 <body class="A4">
-  <section class="sheet" style="display: flex; flex-direction:column">
+  <section class="sheet" style="display: flex; flex-direction: column">
     <h1>CARBONE - Fiche de personnage</h1>
 
     <div class="hspacer"></div>
@@ -29,9 +29,9 @@
       <div style="flex: 2; display: flex">
         <table class="cs-table" style="margin-right: .15cm">
           <tr>
-            <th style="width:50%">Nom</th>
-            <th style="width:25%">Âge</th>
-            <th style="width:25%">Sexe / Genre</th>
+            <th style="width: 50%">Nom</th>
+            <th style="width: 25%">Âge</th>
+            <th style="width: 25%">Sexe / Genre</th>
           </tr>
           <tr>
             <td><textarea></textarea></td>
@@ -48,13 +48,26 @@
       </div>
 
       <div style="flex: 1; display: flex">
-        <table class="cs-table" style="margin-left: .15cm">
+        <table class="cs-table" style="height: 100%; margin-left: .15cm">
           <tr>
-            <th>Apparence</th>
+            <th style="position: relative">
+              Apparence
+              <select id="appearanceSelect">
+                <option value="image">image</option>
+                <option value="text">texte</option>
+              </select>
+            </th>
           </tr>
           <tr>
-            <td></td>
+            <td style="position: relative; height: 100%">
+              <input id="appearanceImageInput" accept="image/*" type='file'></input>
+              <label for="appearanceImageInput">
+                <img id="appearanceImage" src="#" alt="Cliquer&nbsp;pour&nbsp;choisir&nbsp;une&nbsp;image" />
+              </label>
+              <textarea id="appearanceText" style="height: 100%"></textarea>
+            </td>
           </tr>
+          <script src="../js/appearance-select.js"></script>
         </table>
       </div>
     </div>
@@ -81,12 +94,12 @@
 
     <table class="cs-table">
       <tr>
-        <th style="width:33.33%">Points de vie</th>
+        <th style="width: 33.33%">Points de vie</th>
         <th>Statut</th>
       </tr>
       <tr>
-        <td><textarea style="height:2cm"></textarea></td>
-        <td><textarea style="height:2cm"></textarea></td>
+        <td><textarea style="height: 2cm"></textarea></td>
+        <td><textarea style="height: 2cm"></textarea></td>
       </tr>
     </table>
 
@@ -97,13 +110,13 @@
         <tr>
           <th>Succès</th>
           <td>-2</td>
-          <td style="color:white">-1</td>
+          <td style="color: white">-1</td>
           <td>0</td>
           <td>0</td>
-          <td style="color:white">1</td>
-          <td style="color:white">1</td>
+          <td style="color: white">1</td>
+          <td style="color: white">1</td>
           <td>2</td>
-          <td style="color:white">3</td>
+          <td style="color: white">3</td>
           <td>4</td>
         </tr>
       </table>
@@ -126,13 +139,13 @@
         <tr>
           <th>Degré</th>
           <td>-2</td>
-          <td style="color:white">-1</td>
+          <td style="color: white">-1</td>
           <td>0</td>
-          <td style="color:white">1</td>
+          <td style="color: white">1</td>
           <td>2</td>
           <td>2</td>
-          <td style="color:white">3</td>
-          <td style="color:white">3</td>
+          <td style="color: white">3</td>
+          <td style="color: white">3</td>
           <td>4</td>
         </tr>
       </table>
@@ -153,9 +166,9 @@
 
     <table class="cs-table">
       <tr>
-        <th style="width:33.33%">Catalyseur</th>
-        <th style="width:8.33%">Plancher</th>
-        <th style="width:25%">Effet</th>
+        <th style="width: 33.33%">Catalyseur</th>
+        <th style="width: 8.33%">Plancher</th>
+        <th style="width: 25%">Effet</th>
         <th>Remarques</th>
       </tr>
       <tr>
@@ -181,8 +194,8 @@
     <div class="hspacer"></div>
 
     <div style="flex: 1; display: flex">
-      <div style="flex: 2; display:flex">
-        <table class="cs-table" style="margin-right: .15cm; height:100%">
+      <div style="flex: 2; display: flex">
+        <table class="cs-table" style="margin-right: .15cm; height: 100%">
           <tr>
             <th>Objets</th>
           </tr>
@@ -194,7 +207,7 @@
         </table>    
       </div>
         
-      <div style="flex: 1; display:flex">
+      <div style="flex: 1; display: flex">
         <div style="margin-left: .15cm; width: 100%; display: flex; flex-direction: column">
           <table class="cs-table" >
             <tr>
