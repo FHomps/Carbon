@@ -62,13 +62,14 @@
             <tr>
               <td style="position: relative; height: 100%">
                 <input id="appearanceImageInput" accept="image/*" type='file'></input>
-                <label for="appearanceImageInput">
-                  <img id="appearanceImage" src="#" alt="Click&nbsp;to&nbsp;pick&nbsp;an&nbsp;image" />
+                <label id="appearanceImageLabel" for="appearanceImageInput">
+                  <canvas id="appearanceCanvas" height=0 width=0></canvas>
+                  <div id="appearanceImagePrompt">Cliquer pour choisir une image</div>
                 </label>
                 <textarea name="appearanceText" id="appearanceText" style="height: 100%"></textarea>
               </td>
             </tr>
-            <script src="../js/appearance-select.js"></script>
+            <script src="../js/appearance-controls.js"></script>
           </table>
         </div>
       </div>

@@ -1,9 +1,11 @@
 saveButton.onclick = () => {
     const data = new FormData(csForm)
-    const params = new URLSearchParams(data)
+    var params = new URLSearchParams(data)
+    params.append("appearanceImage_b64", appearanceCanvas.toDataURL("image/png"))
     const str = params.toString()
+    const blob = new Blob([str], { type: "text/plain" })
     var link = document.createElement("a")
-    link.href = window.URL.createObjectURL(new Blob([str], { type: "text/plain" }))
+    link.href = window.URL.createObjectURL(blob)
     link.download = "Carbon" + (data.has("name") ? ("_" + data.get("name").split(/\s/)[0]) : "" ) + ".ccs"
     link.click()
   }
@@ -24,6 +26,10 @@ saveButton.onclick = () => {
             element.value = value
           })
         })
+
+        if (params.has("appearanceImage_b64")) {
+          drawAppearanceImage(params.get("appearanceImage_b64"))
+        }
 
         appearanceSelect.onchange()
       }
