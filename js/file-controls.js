@@ -10,36 +10,36 @@ saveButton.onclick = () => {
     link.click()
   }
 
-  loadButton.onclick = () => {
-    var fileInput = document.createElement("input")
-    fileInput.type = "file"
-    fileInput.accept = "text/ccs"
+loadButton.onclick = () => {
+  var fileInput = document.createElement("input")
+  fileInput.type = "file"
+  fileInput.accept = "text/ccs"
 
-    fileInput.onchange = () => {
-      var file = fileInput.files[0]
-      var reader = new FileReader()
-      
-      reader.onload = () => {
-        const params = new URLSearchParams(reader.result)
-        params.forEach((value, key) => {
-          document.getElementsByName(key).forEach((element) => {
-            element.value = value
-          })
+  fileInput.onchange = () => {
+    var file = fileInput.files[0]
+    var reader = new FileReader()
+    
+    reader.onload = () => {
+      const params = new URLSearchParams(reader.result)
+      params.forEach((value, key) => {
+        document.getElementsByName(key).forEach((element) => {
+          element.value = value
         })
+      })
 
-        if (params.has("appearanceImage_b64")) {
-          drawAppearanceImage(params.get("appearanceImage_b64"))
-        }
-
-        appearanceSelect.onchange()
+      if (params.has("appearanceImage_b64")) {
+        drawAppearanceImage(params.get("appearanceImage_b64"))
       }
 
-      reader.readAsText(file, "UTF-8")
+      appearanceSelect.onchange()
     }
 
-    fileInput.click()
+    reader.readAsText(file, "UTF-8")
   }
-  
-  exportButton.onclick = () => {
-    window.print()
-  }
+
+  fileInput.click()
+}
+
+exportButton.onclick = () => {
+  window.print()
+}
